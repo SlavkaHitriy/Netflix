@@ -1,0 +1,98 @@
+@import './fonts';
+@import './mixins';
+@import './variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow: hidden;
+}
+
+body {
+    //font-family: 'Source Sans Pro', sans-serif;
+    //font-family: 'Lato', sans-serif;
+    font-family: 'Century Gothic', sans-serif;
+    line-height: 1.6;
+    background: $primaryBlack;
+    color: $primaryWhite;
+    overflow-x: hidden;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+input {
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+}
+
+button {
+    border: none;
+    transition: all .15s;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all .15s;
+    display: inline-block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+li {
+    display: block;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.auth {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 30px 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $primaryBlack;
+
+    &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        @include absCenter();
+        @include sameSize(110%);
+        @include bg();
+        background-image: url(../images/auth-bg.jpg);
+        background-size: cover;
+        filter: blur(8px) brightness(.5);
+    }
+}
+
+.main {
+    background-color: $darkerBlack;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 1310px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}

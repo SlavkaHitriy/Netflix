@@ -1,0 +1,39 @@
+@import "variables";
+
+@mixin bg() {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+@mixin absCenter() {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin sameSize($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin radius() {
+    border-radius: 8px 32px;
+}
+
+@mixin btn($font-size: 16px, $py: 10px, $px: 20px) {
+    padding: $py $px;
+    cursor: pointer;
+    width: 100%;
+    font-size: $font-size;
+    border: none;
+    transition: all .15s;
+    background-color: $secondary;
+    color: $primaryWhite;
+    border-radius: 8px 16px;
+    font-weight: 700;
+
+    &:hover {
+        filter: brightness(1.2);
+    }
+}

@@ -1,0 +1,19 @@
+@import "../../../styles/variables";
+
+.register {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registerTitle {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.registerText {
+    font-size: 0.7rem;
+    display: block;
+    margin: 0.5rem 0;
+}
